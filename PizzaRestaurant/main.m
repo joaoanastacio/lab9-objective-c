@@ -19,8 +19,9 @@ int main(int argc, const char * argv[])
     @autoreleasepool {
         NSLog(@"Please pick your pizza size and toppings:");
         Kitchen *restaurantKitchen = [Kitchen new];
-		AnchoviesHaterManager * anchoviesHaterManager = [[AnchoviesHaterManager alloc] initWithDeliveryService:ds];
-		CheeryManager * cheeryManager = [[CheeryManager alloc] init];
+		DeliveryService * delivery = [DeliveryService new];
+		AnchoviesHaterManager * anchoviesHaterManager = [[AnchoviesHaterManager alloc] initWithDeliveryService: delivery];
+//		CheeryManager * cheeryManager = [[CheeryManager alloc] init];
 		[restaurantKitchen setDelegate: anchoviesHaterManager];
         
         while (TRUE) {
@@ -60,7 +61,8 @@ int main(int argc, const char * argv[])
 			NSLog(@"Pizza Size: %lu", [bakedPizza getPizzaSize]);
 			NSLog(@"Pizza Toppings: %@", [bakedPizza getPizzaToppings]);
         }
-
+		
+		[delivery showRecords];
     }
     return 0;
 }

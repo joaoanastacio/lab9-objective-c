@@ -14,9 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CheeryManager : NSObject<KitchenDelegate>
 
-//@property (nonatomic, readonly) DeliveryService * delivery_service;
-//
-//-(instancetype) initWithDeliveryService: (DeliveryService*) delivery_service;
+@property (nonatomic, readonly) DeliveryService * delivery_service;
+-(instancetype) initWithDeliveryService: (DeliveryService*) delivery_service;
 
 -(BOOL)kitchen:(Kitchen *)kitchen shouldMakePizzaOfSize:(PizzaSize)size andToppings:(NSArray *)toppings;
 -(BOOL)kitchenShouldUpgradeOrder:(Kitchen *)kitchen;

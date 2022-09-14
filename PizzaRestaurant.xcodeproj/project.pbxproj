@@ -13,6 +13,8 @@
 		BA75595F28D12D5500DEFE07 /* Pizza.m in Sources */ = {isa = PBXBuildFile; fileRef = BA75595E28D12D5500DEFE07 /* Pizza.m */; };
 		BA75596328D1AB5100DEFE07 /* AnchoviesHaterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BA75596228D1AB5100DEFE07 /* AnchoviesHaterManager.m */; };
 		BA75596628D1AC9800DEFE07 /* CheeryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BA75596528D1AC9800DEFE07 /* CheeryManager.m */; };
+		BA75596928D1B48200DEFE07 /* DeliveryCar.m in Sources */ = {isa = PBXBuildFile; fileRef = BA75596828D1B48200DEFE07 /* DeliveryCar.m */; };
+		BA75596C28D1B49000DEFE07 /* DeliveryService.m in Sources */ = {isa = PBXBuildFile; fileRef = BA75596B28D1B49000DEFE07 /* DeliveryService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +43,10 @@
 		BA75596228D1AB5100DEFE07 /* AnchoviesHaterManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnchoviesHaterManager.m; sourceTree = "<group>"; };
 		BA75596428D1AC9800DEFE07 /* CheeryManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheeryManager.h; sourceTree = "<group>"; };
 		BA75596528D1AC9800DEFE07 /* CheeryManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheeryManager.m; sourceTree = "<group>"; };
+		BA75596728D1B48200DEFE07 /* DeliveryCar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeliveryCar.h; sourceTree = "<group>"; };
+		BA75596828D1B48200DEFE07 /* DeliveryCar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeliveryCar.m; sourceTree = "<group>"; };
+		BA75596A28D1B49000DEFE07 /* DeliveryService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeliveryService.h; sourceTree = "<group>"; };
+		BA75596B28D1B49000DEFE07 /* DeliveryService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeliveryService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +99,10 @@
 				BA75596228D1AB5100DEFE07 /* AnchoviesHaterManager.m */,
 				BA75596428D1AC9800DEFE07 /* CheeryManager.h */,
 				BA75596528D1AC9800DEFE07 /* CheeryManager.m */,
+				BA75596728D1B48200DEFE07 /* DeliveryCar.h */,
+				BA75596828D1B48200DEFE07 /* DeliveryCar.m */,
+				BA75596A28D1B49000DEFE07 /* DeliveryService.h */,
+				BA75596B28D1B49000DEFE07 /* DeliveryService.m */,
 				6001EC85197B4EC300F97011 /* Supporting Files */,
 			);
 			path = PizzaRestaurant;
@@ -158,8 +168,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA75596928D1B48200DEFE07 /* DeliveryCar.m in Sources */,
 				BA75596628D1AC9800DEFE07 /* CheeryManager.m in Sources */,
 				BA75595F28D12D5500DEFE07 /* Pizza.m in Sources */,
+				BA75596C28D1B49000DEFE07 /* DeliveryService.m in Sources */,
 				BA75596328D1AB5100DEFE07 /* AnchoviesHaterManager.m in Sources */,
 				6001EC90197B502F00F97011 /* Kitchen.m in Sources */,
 				6001EC84197B4EC300F97011 /* main.m in Sources */,

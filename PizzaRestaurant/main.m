@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "Kitchen.h"
 #import "Pizza.h"
+#import "AnchoviesHaterManager.h"
+#import "CheeryManager.h"
+#import "DeliveryService.h"
 
 int main(int argc, const char * argv[])
 {
@@ -16,6 +19,9 @@ int main(int argc, const char * argv[])
     @autoreleasepool {
         NSLog(@"Please pick your pizza size and toppings:");
         Kitchen *restaurantKitchen = [Kitchen new];
+		AnchoviesHaterManager * anchoviesHaterManager = [[AnchoviesHaterManager alloc] initWithDeliveryService:ds];
+		CheeryManager * cheeryManager = [[CheeryManager alloc] init];
+		[restaurantKitchen setDelegate: anchoviesHaterManager];
         
         while (TRUE) {
             NSLog(@"> ");

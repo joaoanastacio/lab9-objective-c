@@ -12,14 +12,24 @@
 @implementation Kitchen
 
 - (Pizza *)makePizzaWithSize:(PizzaSize)size toppings:(NSArray *)toppings {
-	if ([toppings containsObject: @"pepperoni"] && size == LARGE) {
-		return [Kitchen largePepperoni];
-	} else if ([toppings count] == 0) {
-		return [Kitchen meatLoversWithSize: &size];
-	} else {
-		Pizza *newPizza = [[Pizza alloc] initWithSize: &size andToppings: toppings];
-		return newPizza;
+	if(self.delegate) {
+		if([self.delegate kitchen:self shouldMakePizzaOfSize:size andToppings:toppings]) {
+			Pizza * pizza;
+			
+			if([self.delegate kitchenShouldUpgradeOrder:self]) {
+				pizza = [[Pizza alloc]initWithSize: LARGE andToppings:toppings];
+			} else {
+				pizza = [[Pizza alloc]initWithSize:size andToppings:toppings];
+			}
+				
+			if ([self.delegate respondsToSelector:@selector(kitchenDidMakePizza:)]) {
+				[self.delegate kitchenDidMakePizza:pizza];
+			}
+				
+			return pizza;
+		}
 	}
+	return NULL;
 }
 
 + (Pizza *) largePepperoni {

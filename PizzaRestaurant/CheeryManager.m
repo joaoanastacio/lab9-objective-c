@@ -28,7 +28,7 @@
 
 -(void)kitchenDidMakePizza: (Pizza *)pizza {
 	NSLog(@"Cheery Manager Actioned");
-//	[self.delivery_service deliverPizza:pizza];
+	[self.delivery_service deliverPizza:pizza];
 }
 
 @end

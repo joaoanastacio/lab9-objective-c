@@ -10,13 +10,13 @@
 
 @implementation AnchoviesHaterManager
 
-//-(instancetype) initWithDeliveryService: (DeliveryService*) delivery_service {
-//	self = [super init];
-//	if(self) {
-//		_delivery_service = delivery_service;
-//	}
-//	return self;
-//}
+-(instancetype) initWithDeliveryService: (DeliveryService*) delivery_service {
+	self = [super init];
+	if(self) {
+		_delivery_service = delivery_service;
+	}
+	return self;
+}
 
 -(BOOL)kitchen:(Kitchen *)kitchen shouldMakePizzaOfSize:(PizzaSize)size andToppings:(NSArray *)toppings {
 	for (NSString *topping in toppings) {
@@ -32,7 +32,7 @@
 }
 
 -(void)kitchenDidMakePizza: (Pizza *)pizza {
-//	[self.delivery_service deliverPizza:pizza];
+	[self.delivery_service deliverPizza:pizza];
 }
 
 @end
